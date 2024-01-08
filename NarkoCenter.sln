@@ -13,6 +13,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NarkoCenter.Service", "src\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NarkoCenter.DataAccess", "src\NarkoCenter.DataAccess\NarkoCenter.DataAccess.csproj", "{245ACBA5-906F-4281-B948-F20919753A6C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Autorization", "src\Autorization\Autorization.csproj", "{B951EC22-BD96-4AD2-BB67-AAC86ED154C1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NarkoCenter.TelegramBot", "src\NarkoCenter.TelegramBot\NarkoCenter.TelegramBot.csproj", "{A1E5895D-3130-41B2-9A47-876FA7E95AFA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,6 +39,14 @@ Global
 		{245ACBA5-906F-4281-B948-F20919753A6C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{245ACBA5-906F-4281-B948-F20919753A6C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{245ACBA5-906F-4281-B948-F20919753A6C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B951EC22-BD96-4AD2-BB67-AAC86ED154C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B951EC22-BD96-4AD2-BB67-AAC86ED154C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B951EC22-BD96-4AD2-BB67-AAC86ED154C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B951EC22-BD96-4AD2-BB67-AAC86ED154C1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A1E5895D-3130-41B2-9A47-876FA7E95AFA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A1E5895D-3130-41B2-9A47-876FA7E95AFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A1E5895D-3130-41B2-9A47-876FA7E95AFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A1E5895D-3130-41B2-9A47-876FA7E95AFA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -44,5 +56,10 @@ Global
 		{BC973CA4-8DC8-4A91-A898-F8AB873AB0D1} = {798C1FED-95F2-40B3-AE2A-572EC1B7D4EA}
 		{620B9E9D-BA24-4127-8CE4-DE8C99744DF3} = {798C1FED-95F2-40B3-AE2A-572EC1B7D4EA}
 		{245ACBA5-906F-4281-B948-F20919753A6C} = {798C1FED-95F2-40B3-AE2A-572EC1B7D4EA}
+		{B951EC22-BD96-4AD2-BB67-AAC86ED154C1} = {798C1FED-95F2-40B3-AE2A-572EC1B7D4EA}
+		{A1E5895D-3130-41B2-9A47-876FA7E95AFA} = {798C1FED-95F2-40B3-AE2A-572EC1B7D4EA}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7FD97311-CFC3-4D35-A505-C6D3315C9B66}
 	EndGlobalSection
 EndGlobal
