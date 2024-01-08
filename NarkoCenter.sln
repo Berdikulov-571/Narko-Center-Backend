@@ -5,7 +5,13 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{798C1FED-95F2-40B3-AE2A-572EC1B7D4EA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NarkoCenter.Api", "src\NarkoCenter.Api\NarkoCenter.Api.csproj", "{D2138E67-F374-416F-9A21-88CFB4AD6082}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NarkoCenter.Api", "src\NarkoCenter.Api\NarkoCenter.Api.csproj", "{D2138E67-F374-416F-9A21-88CFB4AD6082}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NarkoCenter.Domain", "src\NarkoCenter.Domain\NarkoCenter.Domain.csproj", "{BC973CA4-8DC8-4A91-A898-F8AB873AB0D1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NarkoCenter.Service", "src\NarkoCenter.Service\NarkoCenter.Service.csproj", "{620B9E9D-BA24-4127-8CE4-DE8C99744DF3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NarkoCenter.DataAccess", "src\NarkoCenter.DataAccess\NarkoCenter.DataAccess.csproj", "{245ACBA5-906F-4281-B948-F20919753A6C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,11 +23,26 @@ Global
 		{D2138E67-F374-416F-9A21-88CFB4AD6082}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D2138E67-F374-416F-9A21-88CFB4AD6082}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D2138E67-F374-416F-9A21-88CFB4AD6082}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BC973CA4-8DC8-4A91-A898-F8AB873AB0D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC973CA4-8DC8-4A91-A898-F8AB873AB0D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC973CA4-8DC8-4A91-A898-F8AB873AB0D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC973CA4-8DC8-4A91-A898-F8AB873AB0D1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{620B9E9D-BA24-4127-8CE4-DE8C99744DF3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{620B9E9D-BA24-4127-8CE4-DE8C99744DF3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{620B9E9D-BA24-4127-8CE4-DE8C99744DF3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{620B9E9D-BA24-4127-8CE4-DE8C99744DF3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{245ACBA5-906F-4281-B948-F20919753A6C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{245ACBA5-906F-4281-B948-F20919753A6C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{245ACBA5-906F-4281-B948-F20919753A6C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{245ACBA5-906F-4281-B948-F20919753A6C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{D2138E67-F374-416F-9A21-88CFB4AD6082} = {798C1FED-95F2-40B3-AE2A-572EC1B7D4EA}
+		{BC973CA4-8DC8-4A91-A898-F8AB873AB0D1} = {798C1FED-95F2-40B3-AE2A-572EC1B7D4EA}
+		{620B9E9D-BA24-4127-8CE4-DE8C99744DF3} = {798C1FED-95F2-40B3-AE2A-572EC1B7D4EA}
+		{245ACBA5-906F-4281-B948-F20919753A6C} = {798C1FED-95F2-40B3-AE2A-572EC1B7D4EA}
 	EndGlobalSection
 EndGlobal
