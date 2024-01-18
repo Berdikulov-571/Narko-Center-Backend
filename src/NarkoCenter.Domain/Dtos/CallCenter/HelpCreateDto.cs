@@ -1,8 +1,7 @@
-﻿namespace NarkoCenter.Domain.Entities.CallCenter
+﻿namespace NarkoCenter.Domain.Dtos.CallCenter
 {
-    public class Help
+    public class HelpCreateDto
     {
-        public int HelpId { get; set; }
         public string FullName { get; set; }
         public string PhoneNumber { get; set; }
         public string WhoNeedsHelp { get; set; }
