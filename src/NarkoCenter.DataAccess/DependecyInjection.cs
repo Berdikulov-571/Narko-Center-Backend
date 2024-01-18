@@ -7,7 +7,7 @@ namespace NarkoCenter.DataAccess
     {
         public static IServiceCollection AddDataAccess(this IServiceCollection services,IConfiguration configuration)
         {
-            services.AddDbContext<>
+            throw new NotImplementedException();
         }
     }
 }
