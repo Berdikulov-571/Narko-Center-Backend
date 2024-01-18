@@ -7,6 +7,5 @@
         public string PhoneNumber { get; set; }
         public string WhoNeedsHelp { get; set; }
         public string WhatToTreatFor { get; set; }
-
     }
 }
