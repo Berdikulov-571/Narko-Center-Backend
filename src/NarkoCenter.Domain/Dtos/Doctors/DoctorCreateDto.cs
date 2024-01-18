@@ -1,4 +1,6 @@
-﻿namespace NarkoCenter.Domain.Dtos.Doctors
+﻿using Microsoft.AspNetCore.Http;
+
+namespace NarkoCenter.Domain.Dtos.Doctors
 {
     public class DoctorCreateDto
     {
@@ -7,6 +9,6 @@
         public int Experience { get; set; }
         public string PhoneNumber { get; set; }
         public DateTime BirthDate { get; set; }
-        public string ImagePath { get; set; }
+        public IFormFile Image { get; set; }
     }
 }
