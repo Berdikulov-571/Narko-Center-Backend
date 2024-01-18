@@ -5,7 +5,7 @@ namespace NarkoCenter.Domain.Entities.Documents
 {
     public class Document : Auditable
     {
-        public int DOcumentId { get; set; }
+        public int DocumentId { get; set; }
         public string DocumentPath { get; set; }
         public DocumentType DocumentType { get; set; }
     }
