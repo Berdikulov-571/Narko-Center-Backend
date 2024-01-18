@@ -18,10 +18,28 @@
 	</ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Abstractions\DataAccess\" />
-    <Folder Include="Security\" />
     <Folder Include="Service\BackGround\" />
-    <Folder Include="UseCases\" />
+    <Folder Include="UseCases\CallCenter\Commands\" />
+    <Folder Include="UseCases\CallCenter\Handlers\" />
+    <Folder Include="UseCases\CallCenter\Queries\" />
+    <Folder Include="UseCases\Companies\Commands\" />
+    <Folder Include="UseCases\Companies\Handlers\" />
+    <Folder Include="UseCases\Companies\Queries\" />
+    <Folder Include="UseCases\Doctors\Commands\" />
+    <Folder Include="UseCases\Doctors\Handlers\" />
+    <Folder Include="UseCases\Doctors\Queries\" />
+    <Folder Include="UseCases\Documents\Commands\" />
+    <Folder Include="UseCases\Documents\Handlers\" />
+    <Folder Include="UseCases\Documents\Queries\" />
+    <Folder Include="UseCases\HospitalNews\Commands\" />
+    <Folder Include="UseCases\HospitalNews\Handlers\" />
+    <Folder Include="UseCases\HospitalNews\Queries\" />
+    <Folder Include="UseCases\Services\Commands\" />
+    <Folder Include="UseCases\Services\Handlers\" />
+    <Folder Include="UseCases\Services\Queries\" />
+    <Folder Include="UseCases\Users\Commands\" />
+    <Folder Include="UseCases\Users\Handlers\" />
+    <Folder Include="UseCases\Users\Queries\" />
   </ItemGroup>
 
   <ItemGroup>
