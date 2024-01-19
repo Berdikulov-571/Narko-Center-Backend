@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using NarkoCenter.Service.Abstractions.File;
 using NarkoCenter.Service.Common.Helpers;
 
@@ -8,12 +9,13 @@ namespace NarkoCenter.Service.Service.Files
     {
         private readonly string MEDIA = "media";
         private readonly string IMAGES = "images";
-        private readonly string FILES = "files";
         private readonly string ROOTPATH;
-        public FileService()
+
+        public FileService(IWebHostEnvironment env)
         {
-            ROOTPATH = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
+            ROOTPATH = env.WebRootPath;
         }
+
 
         public async ValueTask<bool> DeleteImageAsync(string file)
         {
@@ -54,7 +56,7 @@ namespace NarkoCenter.Service.Service.Files
         public async ValueTask<string> UploadFileAsync(IFormFile file)
         {
             string newImageName = MediaHelper.MakeFileName(file.FileName.ToLower());
-            string subPath = Path.Combine(MEDIA, FILES, newImageName);
+            string subPath = Path.Combine(MEDIA, IMAGES, newImageName);
             string path = Path.Combine(ROOTPATH, subPath);
 
             using (var stream = new FileStream(path, FileMode.Create))
