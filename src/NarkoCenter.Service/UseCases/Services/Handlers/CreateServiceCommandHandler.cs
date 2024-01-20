@@ -23,10 +23,11 @@ namespace NarkoCenter.Service.UseCases.Services.Handlers
                 DoctorId = request.DoctorId,
                 HowManyPeopleThisRoom = request.HowManyPeopleThisRoom,
                 PriceADay = request.PriceADay,
-                IconPath = await _fileService.UploadImageAsync(request.IconPath),
                 CreatedAt = DateTime.UtcNow,
                 ServiceName = request.ServiceName,
+                IconPath = await _fileService.UploadImageAsync(request.IconPath)
             };
+
 
             await _context.Services.AddAsync(service);
             int response = await _context.SaveChangesAsync(cancellationToken);

@@ -11,6 +11,8 @@ namespace NarkoCenter.DataAccess.Persistence.DataAccess
 {
     public class ApplicationDbContext : DbContext, IApplicationDbContext
     {
+        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options) { }
+
         public DbSet<AnswerAndQuestions> AnswerAndQuestions { get; set; }
         public DbSet<Help> Helps { get; set; }
         public DbSet<Hospital> Hospitals { get; set; }

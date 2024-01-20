@@ -15,7 +15,7 @@ namespace NarkoCenter.Service.UseCases.CallCenter.AnswerAndQuestions.Handlers
         }
         public async Task<int> Handle(CreateAnswerAndQuestionCommand request, CancellationToken cancellationToken)
         {
-            AnswerAndQuestions answerAndQuestions = new AnswerAndQuestions()
+            Domain.Entities.CallCenter.AnswerAndQuestions answerAndQuestions = new Domain.Entities.CallCenter.AnswerAndQuestions()
             {
                 FullName = request.FullName,
                 PhoneNumber = request.PhoneNumber,
