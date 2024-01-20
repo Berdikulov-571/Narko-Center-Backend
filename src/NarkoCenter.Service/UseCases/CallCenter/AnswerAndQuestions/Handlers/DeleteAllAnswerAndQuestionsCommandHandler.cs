@@ -1,8 +1,8 @@
 ﻿using MediatR;
 using NarkoCenter.Service.Abstractions.DataAccess;
-using NarkoCenter.Service.UseCases.CallCenter.Commands;
+using NarkoCenter.Service.UseCases.CallCenter.AnswerAndQuestions.Commands;
 
-namespace NarkoCenter.Service.UseCases.CallCenter.Handlers
+namespace NarkoCenter.Service.UseCases.CallCenter.AnswerAndQuestions.Handlers
 {
     public class DeleteAllAnswerAndQuestionsCommandHandler : IRequestHandler<DeleteAllAnswerAndQuestions, int>
     {

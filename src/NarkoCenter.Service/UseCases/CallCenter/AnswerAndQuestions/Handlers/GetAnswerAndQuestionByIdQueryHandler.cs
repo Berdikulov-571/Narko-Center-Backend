@@ -3,9 +3,9 @@ using Microsoft.EntityFrameworkCore;
 using NarkoCenter.Domain.Entities.CallCenter;
 using NarkoCenter.Domain.Exceptions.AnswerAndQuestions;
 using NarkoCenter.Service.Abstractions.DataAccess;
-using NarkoCenter.Service.UseCases.CallCenter.Queries;
+using NarkoCenter.Service.UseCases.CallCenter.AnswerAndQuestions.Queries;
 
-namespace NarkoCenter.Service.UseCases.CallCenter.Handlers
+namespace NarkoCenter.Service.UseCases.CallCenter.AnswerAndQuestions.Handlers
 {
     public class GetAnswerAndQuestionByIdQueryHandler : IRequestHandler<GetAnswerAndQuestionByIdQuery, AnswerAndQuestions>
     {
