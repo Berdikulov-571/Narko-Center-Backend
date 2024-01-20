@@ -7,7 +7,7 @@ using NarkoCenter.Service.UseCases.CallCenter.AnswerAndQuestions.Queries;
 
 namespace NarkoCenter.Service.UseCases.CallCenter.AnswerAndQuestions.Handlers
 {
-    public class GetAllAnswerAndQuestionQueryHandler : IRequestHandler<GetAllAnswerAndQuestionsQuery, IEnumerable<AnswerAndQuestions>>
+    public class GetAllAnswerAndQuestionQueryHandler : IRequestHandler<GetAllAnswerAndQuestionsQuery, IEnumerable<Domain.Entities.CallCenter.AnswerAndQuestions>>
     {
         private readonly IApplicationDbContext _context;
 
@@ -16,9 +16,9 @@ namespace NarkoCenter.Service.UseCases.CallCenter.AnswerAndQuestions.Handlers
             _context = context;
         }
 
-        public async Task<IEnumerable<AnswerAndQuestions>> Handle(GetAllAnswerAndQuestionsQuery request, CancellationToken cancellationToken)
+        public async Task<IEnumerable<Domain.Entities.CallCenter.AnswerAndQuestions>> Handle(GetAllAnswerAndQuestionsQuery request, CancellationToken cancellationToken)
         {
-            IEnumerable<AnswerAndQuestions> response = await _context.AnswerAndQuestions.ToListAsync(cancellationToken);
+            IEnumerable<Domain.Entities.CallCenter.AnswerAndQuestions> response = await _context.AnswerAndQuestions.ToListAsync(cancellationToken);
 
             if (response == null)
                 throw new QuestionNotFound();

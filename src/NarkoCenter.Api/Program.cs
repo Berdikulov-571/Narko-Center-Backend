@@ -1,3 +1,7 @@
+using NarkoCenter.Api.Authorization;
+using NarkoCenter.DataAccess;
+using NarkoCenter.Service;
+using System.Text.Json.Serialization;
 
 namespace NarkoCenter.Api
 {
@@ -7,26 +11,33 @@ namespace NarkoCenter.Api
         {
             var builder = WebApplication.CreateBuilder(args);
 
-            // Add services to the container.
+            builder.Services.AddService();
+            builder.Services.AddDataAccess(builder.Configuration);
+            builder.Services.AddControllersWithViews()
+                .AddJsonOptions(x => x.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles);
+            builder.Services.AddAutorization();
+
 
             builder.Services.AddControllers();
-            // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
 
             var app = builder.Build();
 
-            // Configure the HTTP request pipeline.
             if (app.Environment.IsDevelopment())
             {
                 app.UseSwagger();
-                app.UseSwaggerUI();
+                app.UseSwaggerUI(options =>
+                {
+                    options.SwaggerEndpoint("/swagger/V1/swagger.json", "Auth Demo API");
+                });
             }
+
+            app.UseAuthentication();
 
             app.UseHttpsRedirection();
 
             app.UseAuthorization();
-
 
             app.MapControllers();
 

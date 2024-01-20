@@ -6,6 +6,5 @@ namespace NarkoCenter.Domain.Dtos.HospitalNews
     {
         public string Description { get; set; }
         public IFormFile ImagePath { get; set; }
-        public DateTime CreatedAt { get; set; }
     }
 }
