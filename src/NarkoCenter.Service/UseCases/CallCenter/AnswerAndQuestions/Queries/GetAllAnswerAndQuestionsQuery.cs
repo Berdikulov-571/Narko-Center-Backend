@@ -3,7 +3,7 @@ using NarkoCenter.Domain.Entities.CallCenter;
 
 namespace NarkoCenter.Service.UseCases.CallCenter.AnswerAndQuestions.Queries
 {
-    public class GetAllAnswerAndQuestionsQuery : IRequest<IEnumerable<AnswerAndQuestions>>
+    public class GetAllAnswerAndQuestionsQuery : IRequest<IEnumerable<Domain.Entities.CallCenter.AnswerAndQuestions>>
     {
 
     }
