@@ -21,9 +21,6 @@
   <ItemGroup>
     <Folder Include="Service\BackGround\" />
     <Folder Include="UseCases\Documents\Commands\" />
-    <Folder Include="UseCases\Services\Commands\" />
-    <Folder Include="UseCases\Services\Handlers\" />
-    <Folder Include="UseCases\Services\Queries\" />
     <Folder Include="UseCases\Users\Commands\" />
     <Folder Include="UseCases\Users\Handlers\" />
     <Folder Include="UseCases\Users\Queries\" />

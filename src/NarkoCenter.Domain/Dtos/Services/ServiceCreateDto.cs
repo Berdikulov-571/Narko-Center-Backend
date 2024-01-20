@@ -1,4 +1,6 @@
-﻿namespace NarkoCenter.Domain.Dtos.Services
+﻿using Microsoft.AspNetCore.Http;
+
+namespace NarkoCenter.Domain.Dtos.Services
 {
     public class ServiceCreateDto
     {
@@ -6,6 +8,6 @@
         public decimal PriceADay { get; set; } = default!;
         public int HowManyPeopleThisRoom { get; set; } = default!;
         public int DoctorId { get; set; }
-        public string IconPath { get; set; }
+        public IFormFile IconPath { get; set; }
     }
 }
