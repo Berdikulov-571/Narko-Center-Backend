@@ -1,9 +1,9 @@
 ﻿using MediatR;
 using NarkoCenter.Domain.Entities.CallCenter;
 using NarkoCenter.Service.Abstractions.DataAccess;
-using NarkoCenter.Service.UseCases.CallCenter.Commands;
+using NarkoCenter.Service.UseCases.CallCenter.AnswerAndQuestions.Commands;
 
-namespace NarkoCenter.Service.UseCases.CallCenter.Handlers
+namespace NarkoCenter.Service.UseCases.CallCenter.AnswerAndQuestions.Handlers
 {
     public class CreateAnswerAndQuestionCommandHandler : IRequestHandler<CreateAnswerAndQuestionCommand, int>
     {
@@ -22,7 +22,7 @@ namespace NarkoCenter.Service.UseCases.CallCenter.Handlers
                 CreatedAt = DateTime.UtcNow,
             };
 
-            await _context.AnswerAndQuestions.AddAsync(answerAndQuestions,cancellationToken);
+            await _context.AnswerAndQuestions.AddAsync(answerAndQuestions, cancellationToken);
             int response = await _context.SaveChangesAsync(cancellationToken);
 
             return response;
