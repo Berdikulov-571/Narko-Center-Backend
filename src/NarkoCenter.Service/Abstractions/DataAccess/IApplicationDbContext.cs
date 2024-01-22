@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using NarkoCenter.Domain.Entities.Admins;
 using NarkoCenter.Domain.Entities.CallCenter;
 using NarkoCenter.Domain.Entities.Companies;
 using NarkoCenter.Domain.Entities.Doctors;
@@ -12,6 +13,7 @@ namespace NarkoCenter.Service.Abstractions.DataAccess
     public interface IApplicationDbContext
     {
         DbSet<AnswerAndQuestions> AnswerAndQuestions { get; set; }
+        DbSet<Admin> Admins { get; set; }
         DbSet<Help> Helps { get; set; }
         DbSet<Hospital> Hospitals { get; set; }
         DbSet<Doctor> Doctors { get; set; }
