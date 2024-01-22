@@ -1,3 +1,5 @@
+using Autorization.Interfaces;
+using Autorization.Services;
 using NarkoCenter.Api.Authorization;
 using NarkoCenter.DataAccess;
 using NarkoCenter.Service;
@@ -16,6 +18,22 @@ namespace NarkoCenter.Api
             builder.Services.AddControllersWithViews()
                 .AddJsonOptions(x => x.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles);
             builder.Services.AddAutorization();
+            builder.Services.AddScoped<IAuthService, AuthService>();
+
+            var MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
+            builder.Services.AddCors(options =>
+            {
+                options.AddPolicy(name: MyAllowSpecificOrigins,
+                                  policy =>
+                                  {
+                                      policy.WithOrigins("http://localhost:4200",
+                                                          "http://localhost:4201")
+                                      .AllowAnyHeader()
+                                      .AllowAnyMethod()
+                                      .AllowAnyOrigin();
+
+                                  });
+            });
 
 
             builder.Services.AddControllers();
@@ -38,6 +56,8 @@ namespace NarkoCenter.Api
             app.UseHttpsRedirection();
 
             app.UseAuthorization();
+
+            app.UseCors(MyAllowSpecificOrigins);
 
             app.MapControllers();
 

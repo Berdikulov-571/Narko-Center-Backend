@@ -1,4 +1,5 @@
 ﻿using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using NarkoCenter.Service.UseCases.HospitalNews.Commands;
 using NarkoCenter.Service.UseCases.HospitalNews.Queries;
@@ -24,6 +25,7 @@ namespace NarkoCenter.Api.Controllers
             return Ok(response);
         }
 
+        [Authorize(Roles = "SuperAdmin")]
         [HttpGet]
         public async ValueTask<IActionResult> GetAllAsync()
         {
