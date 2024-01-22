@@ -20,7 +20,8 @@ namespace NarkoCenter.Service.UseCases.CallCenter.Help.Handlers
                 FullName = request.FullName,
                 PhoneNumber = request.PhoneNumber,
                 WhatToTreatFor = request.WhatToTreatFor,
-                WhoNeedsHelp = request.WhoNeedsHelp
+                WhoNeedsHelp = request.WhoNeedsHelp,
+                WhereToPickUp = request.WhereToPickUp
             };
 
             await _context.Helps.AddAsync(help, cancellationToken);

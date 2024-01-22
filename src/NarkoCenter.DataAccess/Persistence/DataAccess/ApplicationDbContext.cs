@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using NarkoCenter.Domain.Entities.Admins;
 using NarkoCenter.Domain.Entities.CallCenter;
 using NarkoCenter.Domain.Entities.Companies;
 using NarkoCenter.Domain.Entities.Doctors;
@@ -21,5 +22,6 @@ namespace NarkoCenter.DataAccess.Persistence.DataAccess
         public DbSet<News> News { get; set; }
         public DbSet<Domain.Entities.Services.Service> Services { get; set; }
         public DbSet<User> Users { get; set; }
+        public DbSet<Admin> Admins { get; set; }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using NarkoCenter.Domain.Entities.Companies;
 using NarkoCenter.Service.UseCases.Companies.Commands;

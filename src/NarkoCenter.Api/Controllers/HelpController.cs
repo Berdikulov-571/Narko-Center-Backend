@@ -1,4 +1,5 @@
 ﻿using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using NarkoCenter.Domain.Entities.CallCenter;
 using NarkoCenter.Service.UseCases.CallCenter.Help.Commands;
@@ -25,6 +26,7 @@ namespace NarkoCenter.Api.Controllers
             return Ok(response);
         }
 
+        [Authorize(Roles = "SuperAdmin")]
         [HttpGet]
         public async ValueTask<IActionResult> GetAllAsync()
         {
