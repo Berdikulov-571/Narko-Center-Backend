@@ -26,6 +26,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Autorization\Autorization.csproj" />
     <ProjectReference Include="..\NarkoCenter.DataAccess\NarkoCenter.DataAccess.csproj" />
     <ProjectReference Include="..\NarkoCenter.Service\NarkoCenter.Service.csproj" />
   </ItemGroup>
