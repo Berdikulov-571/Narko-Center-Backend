@@ -14,6 +14,21 @@ namespace Autorization
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
 
+            var MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
+            builder.Services.AddCors(options =>
+            {
+                options.AddPolicy(name: MyAllowSpecificOrigins,
+                                  policy =>
+                                  {
+                                      policy.WithOrigins("http://localhost:4200",
+                                                          "http://localhost:4201")
+                                      .AllowAnyHeader()
+                                      .AllowAnyMethod()
+                                      .AllowAnyOrigin();
+
+                                  });
+            });
+
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
