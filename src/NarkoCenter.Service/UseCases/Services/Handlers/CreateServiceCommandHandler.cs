@@ -1,7 +1,9 @@
 ﻿using MediatR;
+using NarkoCenter.Domain.Entities.Doctors;
 using NarkoCenter.Service.Abstractions.DataAccess;
 using NarkoCenter.Service.Abstractions.File;
 using NarkoCenter.Service.UseCases.Services.Commands;
+using NarkoCenter.TelegramBot;
 
 namespace NarkoCenter.Service.UseCases.Services.Handlers
 {
@@ -31,6 +33,9 @@ namespace NarkoCenter.Service.UseCases.Services.Handlers
 
             await _context.Services.AddAsync(service);
             int response = await _context.SaveChangesAsync(cancellationToken);
+
+            AfterMessage ms = new AfterMessage();
+            ms.Added(service);
 
             return response;
         }
