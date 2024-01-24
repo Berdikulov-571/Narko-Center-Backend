@@ -42,6 +42,7 @@ namespace Autorization
 
             app.UseAuthorization();
 
+            app.UseStaticFiles();
 
             app.MapControllers();
 
