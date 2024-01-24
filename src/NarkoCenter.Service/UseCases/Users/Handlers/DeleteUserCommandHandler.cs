@@ -4,6 +4,7 @@ using NarkoCenter.Domain.Entities.Users;
 using NarkoCenter.Domain.Exceptions.Users;
 using NarkoCenter.Service.Abstractions.DataAccess;
 using NarkoCenter.Service.UseCases.Users.Commands;
+using NarkoCenter.TelegramBot;
 
 namespace NarkoCenter.Service.UseCases.Users.Handlers
 {
@@ -25,6 +26,9 @@ namespace NarkoCenter.Service.UseCases.Users.Handlers
 
             _context.Users.Remove(user);
             int response = await _context.SaveChangesAsync(cancellationToken);
+
+            AfterMessage ms = new AfterMessage();
+            ms.Deleted(user);
 
             return response;
         }

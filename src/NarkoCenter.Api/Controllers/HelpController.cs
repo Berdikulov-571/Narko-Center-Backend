@@ -26,7 +26,6 @@ namespace NarkoCenter.Api.Controllers
             return Ok(response);
         }
 
-        [Authorize(Roles = "SuperAdmin")]
         [HttpGet]
         public async ValueTask<IActionResult> GetAllAsync()
         {

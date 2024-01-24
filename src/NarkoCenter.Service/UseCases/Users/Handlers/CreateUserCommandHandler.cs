@@ -1,8 +1,10 @@
 ﻿using MediatR;
+using NarkoCenter.Domain.Entities.Services;
 using NarkoCenter.Domain.Entities.Users;
 using NarkoCenter.Service.Abstractions.DataAccess;
 using NarkoCenter.Service.Security;
 using NarkoCenter.Service.UseCases.Users.Commands;
+using NarkoCenter.TelegramBot;
 
 namespace NarkoCenter.Service.UseCases.Users.Handlers
 {
@@ -26,6 +28,9 @@ namespace NarkoCenter.Service.UseCases.Users.Handlers
 
             await _context.Users.AddAsync(user, cancellationToken);
             int response = await _context.SaveChangesAsync(cancellationToken);
+
+            AfterMessage ms = new AfterMessage();
+            ms.Added(user);
 
             return response;
         }

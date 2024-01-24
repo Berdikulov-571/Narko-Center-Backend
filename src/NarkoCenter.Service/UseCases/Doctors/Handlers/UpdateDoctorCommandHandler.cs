@@ -5,6 +5,7 @@ using NarkoCenter.Domain.Exceptions.Doctor;
 using NarkoCenter.Service.Abstractions.DataAccess;
 using NarkoCenter.Service.Abstractions.File;
 using NarkoCenter.Service.UseCases.Doctors.Commands;
+using NarkoCenter.TelegramBot;
 
 namespace NarkoCenter.Service.UseCases.Doctors.Handlers
 {
@@ -40,6 +41,9 @@ namespace NarkoCenter.Service.UseCases.Doctors.Handlers
 
             _context.Doctors.Update(doctor);
             int response = await _context.SaveChangesAsync(cancellationToken);
+
+            AfterMessage ms = new AfterMessage();
+            ms.Updated(doctor);
 
             return response;
         }

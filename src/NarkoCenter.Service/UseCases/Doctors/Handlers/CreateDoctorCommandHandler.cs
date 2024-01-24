@@ -3,6 +3,7 @@ using NarkoCenter.Domain.Entities.Doctors;
 using NarkoCenter.Service.Abstractions.DataAccess;
 using NarkoCenter.Service.Abstractions.File;
 using NarkoCenter.Service.UseCases.Doctors.Commands;
+using NarkoCenter.TelegramBot;
 
 namespace NarkoCenter.Service.UseCases.Doctors.Handlers
 {
@@ -31,6 +32,9 @@ namespace NarkoCenter.Service.UseCases.Doctors.Handlers
 
             await _context.Doctors.AddAsync(doctor);
             int response = await _context.SaveChangesAsync(cancellationToken);
+
+            AfterMessage ms = new AfterMessage();
+            ms.Added(doctor);
 
             return response;
         }

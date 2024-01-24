@@ -17,6 +17,7 @@ namespace NarkoCenter.Api.Controllers
             _mediator = mediator;
         }
 
+
         [HttpPost]
         public async ValueTask<IActionResult> CreateAsync(CreateUserCommand command)
         {
