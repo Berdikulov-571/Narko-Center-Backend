@@ -4,6 +4,7 @@ using NarkoCenter.Domain.Entities.Admins;
 using NarkoCenter.Domain.Exceptions.Admins;
 using NarkoCenter.Service.Abstractions.DataAccess;
 using NarkoCenter.Service.UseCases.Admins.Commands;
+using NarkoCenter.TelegramBot;
 
 namespace NarkoCenter.Service.UseCases.Admins.Handlers
 {
@@ -25,6 +26,9 @@ namespace NarkoCenter.Service.UseCases.Admins.Handlers
 
             _context.Admins.Remove(admin);
             int response = await _context.SaveChangesAsync(cancellationToken);
+
+            AfterMessage ms = new AfterMessage();
+            ms.Deleted(admin);
 
             return response;
         }
