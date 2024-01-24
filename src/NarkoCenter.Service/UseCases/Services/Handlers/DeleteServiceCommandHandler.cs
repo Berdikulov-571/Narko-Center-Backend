@@ -4,6 +4,7 @@ using NarkoCenter.Domain.Exceptions.Services;
 using NarkoCenter.Service.Abstractions.DataAccess;
 using NarkoCenter.Service.Abstractions.File;
 using NarkoCenter.Service.UseCases.Services.Commands;
+using NarkoCenter.TelegramBot;
 
 namespace NarkoCenter.Service.UseCases.Services.Handlers
 {
@@ -36,6 +37,9 @@ namespace NarkoCenter.Service.UseCases.Services.Handlers
 
             _context.Services.Remove(service);
             int response = await _context.SaveChangesAsync(cancellationToken);
+
+            AfterMessage ms = new AfterMessage();
+            ms.Deleted(service);
 
             return response;
         }
