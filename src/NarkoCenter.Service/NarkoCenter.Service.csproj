@@ -25,6 +25,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\NarkoCenter.Domain\NarkoCenter.Domain.csproj" />
+    <ProjectReference Include="..\NarkoCenter.TelegramBot\NarkoCenter.TelegramBot.csproj" />
   </ItemGroup>
 
 	<ItemGroup>

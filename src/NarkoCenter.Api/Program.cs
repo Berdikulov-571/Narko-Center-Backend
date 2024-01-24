@@ -54,7 +54,7 @@ namespace NarkoCenter.Api
             app.UseAuthentication();
 
             app.UseHttpsRedirection();
-
+            app.UseStaticFiles();
             app.UseAuthorization();
 
             app.UseCors(MyAllowSpecificOrigins);
