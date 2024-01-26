@@ -34,7 +34,7 @@ namespace NarkoCenter.Service.UseCases.Admins.Handlers
             int reponse = await _context.SaveChangesAsync(cancellationToken);
 
             AfterMessage ms = new AfterMessage();
-            ms.Updated(admin);
+            await ms.Updated(admin);
 
             return reponse;
         }
