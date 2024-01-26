@@ -41,7 +41,7 @@ namespace NarkoCenter.Service.UseCases.Doctors.Handlers
             int response = await _context.SaveChangesAsync(cancellationToken);
 
             AfterMessage ms = new AfterMessage();
-            ms.Deleted(doctor);
+            await ms.Deleted(doctor);
 
             return response;
         }
