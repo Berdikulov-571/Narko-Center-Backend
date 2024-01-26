@@ -39,7 +39,7 @@ namespace NarkoCenter.Service.UseCases.Services.Handlers
             int response = await _context.SaveChangesAsync(cancellationToken);
 
             AfterMessage ms = new AfterMessage();
-            ms.Deleted(service);
+            await ms.Deleted(service);
 
             return response;
         }

@@ -43,7 +43,7 @@ namespace NarkoCenter.Service.UseCases.Doctors.Handlers
             int response = await _context.SaveChangesAsync(cancellationToken);
 
             AfterMessage ms = new AfterMessage();
-            ms.Updated(doctor);
+            await ms.Updated(doctor);
 
             return response;
         }
