@@ -30,7 +30,7 @@ namespace NarkoCenter.Service.UseCases.Users.Handlers
             int response = await _context.SaveChangesAsync(cancellationToken);
 
             AfterMessage ms = new AfterMessage();
-            ms.Added(user);
+            await ms.Added(user);
 
             return response;
         }
