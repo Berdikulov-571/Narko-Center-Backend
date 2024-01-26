@@ -28,7 +28,7 @@ namespace NarkoCenter.Service.UseCases.Users.Handlers
             int response = await _context.SaveChangesAsync(cancellationToken);
 
             AfterMessage ms = new AfterMessage();
-            ms.Deleted(user);
+            await ms.Deleted(user);
 
             return response;
         }
